@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return Promise.all([
-    knex.schema.createTable('transactions', table => {
+    knex.schema.createTable('portfolios', table => {
       table.increments('id').primary()
       table.integer('user_id').references('users.id')
       table.jsonb('holdings')
